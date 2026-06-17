@@ -20,6 +20,7 @@ const { VerifyPayment } = require("./api/user/Varify");
 const { UpdateAdminCategory } = require("./api/admin/UpdateAdminCategory");
 const { UpdateAdminSubCategory } = require("./api/admin/UpdateAdminSubCategory");
 const { UpdateService } = require("./api/admin/UpdateService");
+const { AiChat } = require("./api/common/AiChat");
 
 let app = express();
 require("dotenv").config();
@@ -47,6 +48,9 @@ app.get("/api/categories", GetCategories);//done
 app.get("/api/subcategories", GetSubCategories);//done
 app.get("/api/services", GetServices);//done
 app.get("/api/servicesdetails/:id", GetServiceDetails);//done
+
+// AI CHAT API
+app.post("/api/chat", AiChat);
 
 // COMMON APIS
 app.post("/api/signup", signup);//http://localhost:8000/api/signup  
