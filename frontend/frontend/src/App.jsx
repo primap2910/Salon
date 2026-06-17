@@ -12,6 +12,7 @@ import { AuthProvider } from "./context/AuthContext";
 import "./pages/style.css"
 import Services from "./pages/Services.jsx";
 import Profile from "./pages/Profile.jsx";
+import Chatbot from "./components/Chatbot";
 
 
 function App() {
@@ -35,6 +36,7 @@ function App() {
           <Route path="/Login" element={<Login />} />
         </Routes>
       </BrowserRouter>
+      <Chatbot />
     </AuthProvider>
   );
 }
