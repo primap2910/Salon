@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import CheckToken from '../utility/CheckToken';
 import Logout from '../utility/Logout';
+import Chatbot from '../components/Chatbot';
 
 function Heder() {
 
@@ -17,7 +18,7 @@ function Heder() {
     <>
       <nav className="navbar navbar-expand-lg bg-white">
         <div className="container">
-          
+
           {/* ✅ Image fix */}
           <Link className="navbar-brand" to="/">
             <img src="/img/logo.png" alt="Logo" />
@@ -80,13 +81,19 @@ function Heder() {
                     <li className="nav-item">
                       <Link className="nav-link" to="/Login">Login</Link>
                     </li>
-                  </>
-                )
+
+                    {/* Chat Icon */}
+                    <li className="nav-item" style={{ display: "flex", alignItems: "center", marginLeft: "10px" }}>
+                    
+                    </li>
+                    </>
+                    )
               }
 
-            </ul>
+                  </ul>
+                  <Chatbot />
           </div>
-        </div>
+        </div>  
       </nav>
     </>
   );
